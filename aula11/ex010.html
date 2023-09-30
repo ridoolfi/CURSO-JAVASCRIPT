@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADAR</title>
+    <style>
+        body {
+            background-color: coral;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <h3> Informe a velocidade do carro</h3>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" id="btn" onclick="medir()">
+    <h2 id="res">Resultado...</h2>
+
+
+    <script>
+
+        var vel = window.document.getElementById('txtvel');
+        var resu = document.getElementById('res');
+        function medir() {
+            var tvel = Number(vel.value);
+            if(tvel > 80) {
+                resu.innerHTML = `Você passou á ${tvel} Km/h. ULTRAPASSOU O LIMITE, MULTADO!` + 
+                '<p><strong>Dirija sempre com cinto de segurança</strong></p>';
+                resu.style.color = 'red' ;
+            }else{
+                resu.innerHTML = `Você passou á ${tvel} Km/h. Está dentro do limite, Boa viagem!` +
+                '<p><strong>Dirija sempre com cinto de segurança</strong></p>';
+                resu.style.color = 'green' ;
+            };
+        };
+    </script>
+</body>
+</html>

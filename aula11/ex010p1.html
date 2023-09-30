@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSAPORTE</title>
+</head>
+<body>
+    <h1>Informe o seu pais</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <h2 id="resultado" >Você é...</h2>
+    
+    <script>
+        var pais = window.document.getElementById('pais');
+        function verificar() {
+            var rpais = pais.value
+            var resu = window.document.getElementById('resultado');
+            if(rpais === 'brasil'){
+                resu.innerHTML += `<strong>BRASILEIRO</strong>`;
+                resu.style.color = 'green';
+            }
+            else {
+                resu.innerHTML += `VOCÊ É ESTRANGEIRO`;
+                resu.style.color = 'green';
+
+            }
+        }
+    </script>
+</body>
+</html>
